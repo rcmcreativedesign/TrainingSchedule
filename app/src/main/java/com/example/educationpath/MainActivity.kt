@@ -1,4 +1,4 @@
-package com.example.educationpath
+package com.rcmcreativedesign.educationpath
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,12 +7,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.educationpath.ui.theme.EducationPathTheme
-import com.example.educationpath.ui.navigation.AppNavigationGraph
-import com.example.educationpath.ui.viewmodel.PathListViewModelFactory
-import com.example.educationpath.ui.viewmodel.PathDetailViewModelFactory
-import com.example.educationpath.ui.screens.PathListScreen
-import com.example.educationpath.ui.screens.PathDetailScreen
+import com.rcmcreativedesign.educationpath.ui.theme.EducationPathTheme
+import com.rcmcreativedesign.educationpath.ui.navigation.AppNavigationGraph
+import com.rcmcreativedesign.educationpath.ui.viewmodel.PathListViewModelFactory
+import com.rcmcreativedesign.educationpath.ui.viewmodel.PathDetailViewModelFactory
+import com.rcmcreativedesign.educationpath.ui.screens.PathListScreen
+import com.rcmcreativedesign.educationpath.ui.screens.PathDetailScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
