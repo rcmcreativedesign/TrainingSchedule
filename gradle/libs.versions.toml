@@ -1,0 +1,10 @@
+[versions]
+agp = "8.4.0" # Use the latest Android Gradle Plugin version
+kotlin = "1.9.23"
+
+[libraries]
+# Add any required app libraries here
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

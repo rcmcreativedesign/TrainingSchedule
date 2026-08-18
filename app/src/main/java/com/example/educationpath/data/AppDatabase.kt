@@ -1,14 +1,22 @@
-package com.example.educationpath.data
+package com.example.educationpath.data.model
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-import androidx.room.Database
-import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
-import com.example.educationpath.data.model.Path
-import com.example.educationpath.data.model.Step
+@Entity(tableName = "path")
+data class Path(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val name: String,
+    val description: String?,
+    val steps: List<Step> = emptyList() // Storing list of steps directly (potential issue)
+)
 
-@Database(entities = [Path::class, Step::class], version = 1, exportSchema = false)
-@TypeConverters(Converters::class)
-abstract class AppDatabase : RoomDatabase<AppDatabase> {
-    // Abstract methods for DAOs will be added later via build tools, 
-    // but defining the class structure here.
-}
+@Entity(tableName = "step")
+data class Step(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val title: String,
+    val description: String?,
+    val order: Int,
+    val pathId: Int // Foreign key reference, though not enforced by Room schema easily
+)
